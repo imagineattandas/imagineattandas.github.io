@@ -3,17 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Min hemsida</title>
+<title>IMAGINE ATT ANDAS</title>
 <style>
-  body { font-family: Arial; text-align: center; background: #111; color: white; padding: 40px; }
-  h1 { font-size: 40px; }
-  p { color: #ccc; }
-  a { display: inline-block; background: #ff4757; color: white; padding: 15px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 20px; }
-</style>
-</head>
-<body>
-  <h1>Välkommen till min sida!</h1>
-  <p>Det här är min första hemsida, gjord på mobilen.</p>
-  <a href="#">Klicka här</a>
-</body>
-</html>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #0a0a0a; color: white; text-align: center; overflow-x: hidden; }
+  
+  .hero { position: relative; padding: 140px 20px 120px; background: linear-gradient(135deg, #ff0066, #7b00ff, #00d4ff); overflow: hidden; }
+  .hero h1 { font-size: 52px; font-weight: 900; text-transform: uppercase; line-height: 0.95; text-shadow: 0 5px 20px rgba(0,0,0,0.5); position: relative; z-index: 2; }
+  .hero p { margin-top: 15px; font-size: 18px; position: relative; z-index: 2; }
+  .btn { display: inline-block; background: white; color: black; padding: 15px 30px; border-radius: 50px; font-weight: bold; text-decoration: none; margin-top: 25px; font-size: 18px; position: relative; z-index: 2; }
+
+  /* ANIMATIONER */
+  @keyframes flyta { 0%,100% { translate: 0 0; } 50% { translate: 0 -12px; } }
+  @keyframes blinka { 0%,100% { opacity: 1; scale: 1; } 50% { opacity: 0.6; scale: 1.08; } }
+  @keyframes skaka { 0%,100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+  @keyframes snurra-lätt { 0%,100% { rotate: -8deg; } 50% { rotate: 8deg; } }
+
+  .sticker { position: absolute; font-weight: 900; padding: 8px 13px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.4); z-index: 3; line-height: 1.1; }
+  
+  /* FLYTER upp och ner */
+  .flyt { animation: flyta 2.5s ease-in-out infinite; }
+  /* BLINKAR */
+  .blink { animation: blinka 1s ease-in-out infinite; }
+  /* SKAKAR */
+  .shake { animation: skaka 0.8s ease-in-out infinite; }
+  /* SNURRAR LITE */
+  .spin { animation: snurra-lätt 3s ease-in-out infinite; }
+
+  .s1 { top: 15px; left: 10px; background: #ffe600; color: black; transform: rotate(-14deg); font-size: 22px; }
+  .s2 { top: 20px; right: 12px; background: #00ff88; color: black; transform: rotate(11deg); font-size: 20px; }
+  .s3 { top: 70px; left: 5px; background: #ff4757; color: white; transform: rotate(-8deg); font-size: 15px; max-width: 160px; }
+  .s4 { top: 75px; right: 5px; background: white; color: black; transform: rotate(10deg); font-size: 15px; max-width: 150px; }
+  .s5 { bottom: 15px; left: 10px; background: #ff00cc; color: white; transform: rotate(-12deg); font-size: 16px; }
+  .s6 { bottom: 20px; right: 10px; background: #00d4ff; color
