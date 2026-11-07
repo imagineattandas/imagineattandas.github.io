@@ -7,16 +7,20 @@
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: sans-serif; background:#111; color:white; overflow-x:hidden; }
-.hero { min-height:100vh; background: linear-gradient(135deg, #ff0080, #ff8c00, #ffee00, #00e5ff, #7c4dff); background-size:300% 300%; animation: bg 8s ease infinite; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; position:relative; }
+.hero { min-height:100vh; background: linear-gradient(135deg, #ff0080, #ff8c00, #ffee00, #00e5ff, #7c4dff); background-size:300% 300%; animation: bg 8s ease infinite; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; position:relative; overflow:hidden; }
 @keyframes bg { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-h1 { font-size:58px; line-height:0.9; text-shadow:4px 4px 0 #000; }
+h1 { font-size:58px; line-height:0.9; text-shadow:4px 4px 0 #000; z-index:2; }
 h1 span { display:block; }
-.sub { background:white; color:black; padding:10px 20px; border-radius:999px; font-weight:900; margin-top:20px; transform:rotate(-2deg); }
-.stickers { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:30px; }
-.sticker { padding:12px 18px; border-radius:999px; font-weight:900; font-size:20px; border:3px solid #000; box-shadow:4px 4px 0 #000; animation: blink 1s infinite alternate; }
-@keyframes blink { from{transform:scale(1) rotate(-3deg)} to{transform:scale(1.1) rotate(3deg)} }
-.s1{background:#ffee00;color:#000} .s2{background:#00e5ff;color:#000;animation-delay:.2s} .s3{background:#ff0080;color:#fff;animation-delay:.4s} .s4{background:#7cff00;color:#000;animation-delay:.6s} .s5{background:#fff;color:#000;animation-delay:.8s}
-.btn { margin-top:30px; background:#000; color:white; padding:16px 30px; border-radius:999px; font-weight:900; font-size:20px; text-decoration:none; }
+.word { position:absolute; font-weight:900; font-size:18px; text-shadow:2px 2px 0 #000; z-index:1; }
+.w1 { top:12%; left:8%; transform:rotate(-15deg); color:#ffee00; }
+.w2 { top:18%; right:10%; transform:rotate(12deg); color:#fff; }
+.w3 { top:38%; left:4%; transform:rotate(8deg); color:#00ff88; }
+.w4 { top:42%; right:5%; transform:rotate(-10deg); color:#ffee00; }
+.w5 { bottom:22%; left:12%; transform:rotate(-8deg); color:#fff; }
+.w6 { bottom:18%; right:14%; transform:rotate(15deg); color:#ffcc00; }
+.w7 { top:8%; left:45%; transform:rotate(-5deg); color:#fff; font-size:14px; }
+.w8 { bottom:32%; left:45%; transform:rotate(6deg); color:#00ff88; font-size:14px; }
+.btn { margin-top:30px; background:#000; color:white; padding:16px 30px; border-radius:999px; font-weight:900; font-size:20px; text-decoration:none; z-index:2; }
 .section { padding:40px 20px; text-align:center; }
 .section h2 { font-size:36px; margin-bottom:10px; }
 .card { background:white; color:black; border-radius:20px; padding:20px; margin:15px auto; max-width:400px; text-align:left; }
@@ -26,19 +30,23 @@ footer { padding:30px; text-align:center; opacity:.7; }
 </head>
 <body>
 <div class="hero">
+<span class="word w1">WOW!</span>
+<span class="word w2">YAY!</span>
+<span class="word w3">CHILL</span>
+<span class="word w4">YES!</span>
+<span class="word w5">HEY!</span>
+<span class="word w6">OOO!</span>
+<span class="word w7">cool</span>
+<span class="word w8">nice</span>
 <h1><span>IMAGINE</span><span>ATT</span><span>ANDAS</span></h1>
-<div class="sub">✦ ANDAS IN • ANDAS UT • BARA VARA ✦</div>
-<div class="stickers">
-<div class="sticker s1">WOW! 😍</div>
-<div class="sticker s2">YAY! 🎉</div>
-<div class="sticker s3">BREATHE ✨</div>
-<div class="sticker s4">CHILL 💚</div>
-<div class="sticker s5">LOVE 💖</div>
-</div>
 <a class="btn" href="#shop">SHOPPA ↓</a>
 </div>
-<div class="section">
+<div class="section" id="shop">
 <h2>SHOP</h2>
-<div class="card"><b>🧢 Keps - 299 kr</b><p>Imagine Att Andas keps. Skön & snygg.</p></div>
-<div class="card"><b>👕 T-shirt - 349 kr</b><p>Andas in, andas ut. Mjuk t-shirt.</p></div>
-<div class="card"><b>🧥 Hoodie - 599
+<div class="card"><b>🧢 Keps - 299 kr</b><p>Imagine Att Andas keps.</p></div>
+<div class="card"><b>👕 T-shirt - 349 kr</b><p>Mjuk t-shirt.</p></div>
+<div class="card"><b>🧥 Hoodie - 599 kr</b><p>Mysigaste hoodien.</p></div>
+</div>
+<footer>© 2026 Imagine Att Andas</footer>
+</body>
+</html>
